@@ -8,14 +8,16 @@
 }
 
 .multilevelpushmenu_wrapper .levelHolderClass {
-	/* position: absolute; */
+	position: absolute;
 	overflow: hidden;
 	top: 0;
 	background: #edb15d;
-	width: 100vw !important;
+	width: 100vw;
 	min-height: 100%;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 1em;
+	height: auto;
+	/* width: 100vw !important; */
+	font-family: 'Eina03';
+	font-size: 13px;
 	zoom: 1;
 }
 
@@ -51,33 +53,40 @@
 
 .multilevelpushmenu_wrapper ul {
 	list-style: none;
-	padding: 0;
-	margin: 0;
 }
 
 .multilevelpushmenu_wrapper li {
 	cursor: pointer;
-	border-top: 1px solid #edb15d;
+	border-top: 1px solid rgba(0, 0, 0, .6);
+	transition: all .3s ease-in-out;
 	padding: .4em .4em .4em .4em;
 }
 
+.multilevelpushmenu_wrapper li:first-child {
+	border-top: 0;
+}
+
 .multilevelpushmenu_wrapper li:last-child {
-	border-bottom: 1px solid #edb15d;
+	border-bottom: 1px solid rgba(0, 0, 0, .6);
 }
 
 .multilevelpushmenu_wrapper li:hover {
-	background-color: #edb15d;
+	background-color: rgba(237, 181, 118, 1);
 }
 
 .multilevelpushmenu_wrapper a {
-	display: block;
+	/* display: block; */
+	display: flex;
 	outline: none;
 	overflow: hidden;
-	font-size: 1.5em;
+	font-size: 13px;
 	line-height: 1em;
-	padding: .2em .2em;
+	padding: 12px 15px;
 	text-decoration: none;
-	color: #fff !important;
+	font-weight: 700;
+	justify-content: space-between;
+	align-items: center;
+	color: #ffffff;
 }
 
 .multilevelpushmenu_wrapper a:hover {

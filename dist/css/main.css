@@ -316,31 +316,10 @@ header {
   position: fixed;
   width: 100%;
   z-index: 10000; }
-  #menu .multilevelpushmenu_wrapper .levelHolderClass {
-    background-color: #edb15d; }
-    #menu .multilevelpushmenu_wrapper .levelHolderClass li {
-      border-top: 1px solid rgba(0, 0, 0, 0.6);
-      -webkit-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out; }
-      #menu .multilevelpushmenu_wrapper .levelHolderClass li a {
-        color: #ffffff;
-        padding: 12px 15px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-weight: 700;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; }
-        #menu .multilevelpushmenu_wrapper .levelHolderClass li a .icon {
-          font-size: 20px; }
-      #menu .multilevelpushmenu_wrapper .levelHolderClass li:last-child {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.6); }
-      #menu .multilevelpushmenu_wrapper .levelHolderClass li:hover {
-        background-color: rgba(237, 177, 93, 0.9); }
+  #menu .multilevelpushmenu_wrapper .levelHolderClass li a .icon {
+    font-size: 20px; }
+  #menu .multilevelpushmenu_wrapper .levelHolderClass li:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6); }
 
 .search-form {
   position: relative;

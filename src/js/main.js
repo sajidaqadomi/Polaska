@@ -60,13 +60,19 @@ $(function () {
         $('#menu').multilevelpushmenu(
             {
                 container: $('#menu'),
-                fullCollapse: true,
-                collapsed: false,
+                collapsed: true,
+                menuWidth: '100%', //to polaska 
+                overlapWidth: 0, //to hide small element
                 mode: 'cover',
                 backText: 'Back',                                          // Text for 'Back' menu item.
                 backItemClass: 'backItemClass',                            // CSS class for back menu item.
                 backItemIcon: 'fa fa-angle-left',                         // FontAvesome icon used for back menu item.
                 groupIcon: '',
+                preventItemClick: true,                                    // set to false if you do not need event callback functionality per item click
+                preventGroupItemClick: true,                               // set to false if you do not need event callback functionality per group item click
+                direction: 'ltr',                                          // set to 'rtl' for reverse sliding direction
+                fullCollapse: true,//hide all                                    // set to true to fully hide base level holder when collapsed
+                swipe: 'none'
 
             }
         );
@@ -78,24 +84,14 @@ $(function () {
         menu.css("top", headerHeigh);
     }
 
-    function animateMinue() {
 
-        menu.animate({
-            left: `${menu.hasClass("show") ? 0 : - menuWidth}`
-        },
-            100
-        )
-
-
-
-    }
 
     ///////////////////////////////
     hamburgerIcon.on('click', function () {
 
         $(this).find('.icon').toggleClass('fa-arrow-left  fa-bars');
-        menu.toggleClass('show')
-        animateMinue();
+        menu.toggleClass('expand');
+        $('#menu').hasClass('expand') ? $('#menu').multilevelpushmenu('expand') : $('#menu').multilevelpushmenu('collapse');
         controlSearchicon($(this).find('.icon'));
     })
 
@@ -104,13 +100,11 @@ $(function () {
     function checkWindow() {
         calcDimetions();
         $('body').css('padding-top', headerHeigh);
-        menu.css("left", -menuWidth);
-        if (window.innerWidth < 768) {
-            initMenu();
-            menu.css("left", -menuWidth);
-            setTopValue();
-            animateMinue();
 
+        if (window.innerWidth < 768) {
+            isMenuInit ? (null) : (initMenu())
+            $('#menu').multilevelpushmenu('redraw');
+            setTopValue();
         }
 
     }
@@ -400,6 +394,7 @@ $(function () {
     let res = getAjaxData();
 
     checkWindow();
+    //initMenu();
 
     ///////////////////////////////////////////
     $(window).on('resize', function () {
@@ -407,7 +402,7 @@ $(function () {
         setTopValue();
     });
     $(window).on('scroll', function () {
-        if (menu.hasClass('show')) {
+        if (menu.hasClass('expand')) {
             hamburgerIcon.click();
         }
 
