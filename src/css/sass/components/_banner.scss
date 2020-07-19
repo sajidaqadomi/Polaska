@@ -7,8 +7,10 @@
 
     .content-wrapping {
         padding: 13.45vh 0 13.45vh 0;
+        margin-left: 0;
 
         @media #{$minMed} {
+            margin-left: 75px;
             padding: 13.45vh 0 13.45vh 0;
         }
 

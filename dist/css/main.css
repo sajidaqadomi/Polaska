@@ -649,9 +649,11 @@ header {
   background-repeat: no-repeat;
   background-position: center; }
   .banner .content-wrapping {
-    padding: 13.45vh 0 13.45vh 0; }
+    padding: 13.45vh 0 13.45vh 0;
+    margin-left: 0; }
     @media (min-width: 768px) {
       .banner .content-wrapping {
+        margin-left: 75px;
         padding: 13.45vh 0 13.45vh 0; } }
     .banner .content-wrapping .content {
       display: inline-block;
@@ -767,7 +769,7 @@ header {
   .categories .category-list {
     width: 80%;
     margin: auto;
-    margin-bottom: 55px; }
+    margin-bottom: 65px; }
     .categories .category-list .list-item {
       margin: 10px; }
       .categories .category-list .list-item .list-link img {
