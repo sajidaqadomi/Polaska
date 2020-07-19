@@ -1,0 +1,204 @@
+html {
+    body {
+        font-family: Eina03;
+
+        iframe {
+            border: 0;
+            width: 100%;
+        }
+
+
+    }
+}
+
+section {
+    padding: 2em 0;
+    border-bottom: 1px solid rgba($mainGColor, 1);
+
+    &.products {
+        padding-top: 0;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-bottom: .7em;
+        font-family: Cochin;
+
+        @media #{$minMed} {
+            font-size: 48px;
+            margin-bottom: 26px;
+
+            &.related {
+                margin-bottom: 40px;
+            }
+        }
+
+        font-weight: bold;
+        line-height: 1.17;
+    }
+
+    @media #{$minMed} {
+        border-bottom: 0;
+        border-top: 1px solid rgba($mainGColor, 1);
+        padding: 5.25em 0 4.25em 0;
+
+        &.products {
+            padding: 0;
+
+            .unit {
+
+                @media #{$minMed} {
+                    padding-top: 4.25em;
+                    padding-bottom: 4.25em;
+
+                }
+
+
+            }
+
+        }
+
+    }
+
+}
+
+.social-list {
+    .item {
+        cursor: pointer;
+
+        img {
+            // background-color: transparent;
+
+            &:hover {
+                box-shadow: 2px 2px 15px rgba($subFColor, .5);
+            }
+
+        }
+
+
+    }
+}
+
+
+.slick-slider {
+    &.daynamic-content {
+        .slick-track {
+            display: flex;
+
+            .card-wrapper {
+                height: inherit;
+                margin: 0 15px 0 15px;
+
+                //large
+                @media #{$minMed} {
+                    margin: 0 15px 0 0;
+
+
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+        }
+    }
+
+    .card {
+        // min-height: 468px;
+        height: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 0px;
+        border: 1px solid rgba($subGColor, 1); //same
+        /* border-radius: .25rem;*/
+
+        transition: all .5s ease-in-out;
+
+
+        .cart {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba($mainBColor, 1);
+            top: 8px;
+            right: 8px;
+            padding: .75em;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+
+            &:hover {
+                box-shadow: 1px 2px 15px rgba($mainBColor, .2);
+                background-color: rgba($mainBColor, .8);
+
+            }
+        }
+
+        transform: scale(1, .95);
+
+        &:hover {
+            box-shadow: 1px 2px 15px 8px rgba($mainBColor, .02);
+            transform: scale(1, 1);
+        }
+
+
+        .img-container {
+            margin-top: 8px; //??
+            display: block; //same
+            margin: auto; //same
+
+            img {
+                max-height: 100%; //glopal
+                height: 100%; //glopal
+
+            }
+        }
+
+        .card-body {
+            padding: .75rem 1.25rem 1rem; //update bootstrap
+            border-bottom: 1px solid rgba($mainBColor, .1); //same
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .card-title {
+                //all same
+                color: $mainBColor;
+                font-weight: 600;
+                line-height: 1.5;
+                letter-spacing: 0.3px;
+                word-wrap: break-word;
+                font-size: 1em;
+
+                &:hover {
+                    color: $subFColor;
+                }
+
+
+            }
+
+        }
+
+        .card-footer {
+            //same
+            background-color: $mainFColor;
+            padding: 15px 0 33px 0;
+
+            .type {
+                font-size: .75em;
+                line-height: 2;
+                letter-spacing: 0.4px;
+                margin-bottom: 36px;
+
+
+            }
+
+            .desc {
+                font-size: .875em;
+                font-weight: bold;
+                line-height: 1.14;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.related-item {
+
+    @import '../components/viewlink';
+
+    .slick-slider {
+
+        .slick-slide {
+            // height: 100%;
+
+        }
+
+        .card {
+
+            .cart {
+                background-color: $mainBColor;
+
+                &:hover {
+                    box-shadow: 1px 2px 15px rgba($mainBColor, .2);
+                    background-color: rgba($mainFColor, 1);
+
+                }
+            }
+
+            .img-container {
+                height: 256px; //
+                width: 122px; //  
+            }
+
+            .card-footer {
+
+                padding: 15px 0 33px 0;
+
+
+            }
+        }
+    }
+}

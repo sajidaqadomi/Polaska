@@ -1,0 +1,117 @@
+.colors-types {
+
+    padding-top: 8px;
+
+    @media #{$minMed} {
+        padding-top: 0;
+
+    }
+
+    .arrow {
+        padding: 1em;
+        width: 90%;
+        background-color: rgba($mainFColor, 1);
+        text-align: center;
+        justify-content: center;
+        box-shadow: 0 40px 43px 0 rgba(0, 0, 0, 0.18);
+
+        &.next-arrow {
+            box-shadow: 0 -33px 27px 0 rgba(0, 0, 0, 0.14), 0 4px 49px 0 rgba(0, 0, 0, 0.14);
+        }
+
+    }
+
+    .slick-slider {
+        width: 100%;
+        // &.vertical {
+        //     @media #{$minMed} {
+        //         //    width: 90% !important;
+        //     }
+
+        .slider-item {
+            width: 100%;
+            height: 104px;
+
+            @media #{$minMed} {
+                width: 90%;
+            }
+
+            padding: 2em 1em;
+            @include flexCenter;
+            font-size: 1.25em;
+            font-weight: 600;
+            color: $mainFColor;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            .deg {
+                font-weight: normal;
+            }
+
+            .selected-container {
+                border-radius: 50%;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s ease-in-out;
+
+            }
+
+            &:hover {
+                @media #{$minMed} {
+                    width: 100%;
+
+                }
+
+            }
+
+            &.select {
+                @media #{$minMed} {
+                    width: 100%;
+                    // box-shadow: 0 -12px 68px 0 rgba(96, 42, 34, 0.44);
+                    box-shadow: 10px 9px 27px 1px rgba(0, 0, 0, 0.28);
+
+                }
+
+                .selected-container {
+                    opacity: 1;
+                    visibility: visible;
+
+                }
+
+            }
+
+
+            &.latte-img {
+                position: relative;
+                padding: 0;
+                object-fit: contain;
+                height: 104px;
+                // width: 90%;
+
+                img {
+                    height: 100%;
+                    min-width: 100%;
+                }
+
+                .latte-desc {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    @include flexCenter;
+                    @extend %px;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+%px {
+    padding-left: 1em;
+    padding-right: 1em;
+}

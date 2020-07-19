@@ -1,0 +1,35 @@
+.product-details {
+
+    background-image: url('../imgs/product-details-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    @media #{$minMed} {
+        text-align: left;
+    }
+
+
+
+    .name {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .desc {
+        line-height: 1.75;
+        width: 100%;
+
+
+        @media #{$minMed} {
+            text-align: left;
+
+            width: 80%;
+        }
+
+    }
+
+
+}

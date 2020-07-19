@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="207" height="12" viewBox="0 0 207 12">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" stroke="#CECECE" d="M0 0L288 0 288 468 0 468z" transform="translate(-40 -423)"/>
+        <text fill="#000" font-family="Eina03-Bold, Eina 03" font-size="14" font-weight="bold" letter-spacing=".5" transform="translate(-40 -423)">
+            <tspan x="43.951" y="434.642">PRODUCTS FROM THE LINE</tspan>
+        </text>
+    </g>
+</svg>

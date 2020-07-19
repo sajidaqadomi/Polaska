@@ -1,0 +1,159 @@
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+
+    .header-content {
+        background-color: $mainBColor;
+        box-shadow: inset 0 -2px 0 0 #d6ac76;
+        padding: 18px 0;
+
+        @media #{ $minMed } {
+            padding: 32px 0 8px 0;
+        }
+
+        .upper-header {
+            .logo-img {
+                text-align: center;
+            }
+
+            .icons-list {
+                display: flex;
+                //justify-content: space-around;
+
+                .icons-item {
+                    text-align: center;
+                    color: $mainFColor;
+                    // cursor: pointer;
+                    position: relative;
+                    transition: all .3s ease-in-out;
+
+                    .icon-link {
+                        display: block;
+
+                        img {
+                            margin-bottom: 4px;
+                        }
+                    }
+
+                    &:not(.cart) {
+                        &:hover {
+                            color: $subFColor;
+
+                            .icon {
+                                color: $subFColor;
+                            }
+
+                        }
+
+                    }
+
+
+
+                    &.cart {
+                        cursor: default;
+
+                        &:before {
+                            content: attr(data-cart);
+                            position: absolute;
+                            top: -40%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 13px;
+                            font-weight: 600;
+                            line-height: 1.54;
+                            color: $subFColor;
+
+                        }
+
+                    }
+
+                    .icon-desc {
+                        @extend %smallfontstyle;
+                    }
+
+
+                }
+
+
+
+                &.right {
+                    justify-content: flex-end;
+
+                    .icons-item {
+                        margin-left: 24px;
+                    }
+                }
+
+                &.left {
+                    justify-content: flex-start;
+
+                    .icons-item {
+                        margin-right: 24px;
+                    }
+                }
+            }
+
+
+
+        }
+
+        .lower-header {
+            .navbar {
+                padding-left: 0;
+                padding-right: 0;
+
+                .nav-item {
+                    text-align: center;
+                    margin-right: 10px;
+
+                    &:first-of-type {
+                        .nav-link {
+                            padding-left: 0;
+                        }
+                    }
+
+                    .nav-link {
+                        color: $mainFColor;
+                        line-height: 1.25;
+                        letter-spacing: 1.4px;
+                        font-weight: 600;
+                        font-size: 13px;
+                        padding: 16px 8px;
+
+
+                        @media #{$minMed} {}
+
+                        @media #{$minLarge} {}
+
+                        @media #{$minXLarge} {}
+
+                        &:hover {
+                            color: rgba($subFColor, 1);
+                        }
+                    }
+
+                    &.active {
+                        .nav-link {
+                            color: rgba($subFColor, 1);
+                        }
+                    }
+                }
+
+
+            }
+
+
+
+        }
+    }
+
+
+
+
+}
+
+@import '../components/menu';
+@import '../components/_searchform.scss';

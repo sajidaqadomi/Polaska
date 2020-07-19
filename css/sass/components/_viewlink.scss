@@ -1,0 +1,18 @@
+.view-link {
+    font-size: 14px;
+    line-height: 1.14;
+    color: black; //
+    margin-bottom: .9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &.c-white {
+        color: $mainFColor;
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        color: rgba($subFColor, 1); //
+    }
+
+}

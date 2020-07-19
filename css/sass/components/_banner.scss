@@ -1,0 +1,72 @@
+.banner {
+    //use mixin
+    background-image: url(../imgs/hero-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .content-wrapping {
+        padding: 13.45vh 0 13.45vh 0;
+
+        @media #{$minMed} {
+            padding: 13.45vh 0 13.45vh 0;
+        }
+
+        .content {
+            display: inline-block;
+            margin-left: 0;
+            text-align: center;
+
+            @media #{$minMed} {
+                margin-left: 3%;
+            }
+
+
+            .img-container {
+                width: 95%;
+                height: 152px;
+
+                @media #{$minMed} {
+                    width: 369px;
+                }
+
+                margin: auto;
+            }
+
+            .desc {
+                margin: 40px auto;
+                font-size: 17px;
+                line-height: 1.65;
+                color: $mainFColor;
+
+                .offer {
+                    font-weight: bold;
+                    display: block;
+                    // margin-top: 18px;
+                    text-align: center;
+
+                }
+            }
+
+            .btn {
+
+                // width: 270px;
+                // height: 64px;
+
+                padding: 25px 35px;
+                letter-spacing: 1.5px;
+                color: $subFColor;
+                border: 1px solid $subFColor;
+
+                &:hover {
+                    background-color: rgba($mainFColor, 1);
+                    border: 2px solid rgba($subFColor, 1);
+
+                }
+            }
+        }
+    }
+
+
+
+}

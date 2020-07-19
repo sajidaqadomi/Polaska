@@ -1,0 +1,84 @@
+.categories {
+    text-align: center;
+
+    .upper-title {
+        font-size: 24px;
+        line-height: 1.33;
+        letter-spacing: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .line {
+            display: inline-block;
+            width: 45px;
+            height: 1px;
+            background-color: rgba($mainBColor, 1);
+
+            &:first-of-type {
+                margin-right: 24px;
+            }
+
+            &:last-of-type {
+                margin-left: 24px;
+            }
+        }
+    }
+
+    .title {
+        //font-family: Cochin;
+        font-size: 56px;
+        // font-weight: bold;
+        font-style: italic;
+        line-height: 1.07;
+        margin-bottom: 60px;
+    }
+
+    .category-list {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 55px;
+
+        .list-item {
+            margin: 10px;
+
+            .list-link {
+                img {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 19px;
+                }
+
+                .name {
+                    color: $mainBColor;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 1.14;
+                    letter-spacing: 1px;
+                }
+
+                &:hover {
+                    .name {
+                        color: $subFColor;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        padding: 24px 47px;
+        letter-spacing: 1px;
+        background-color: rgba($subFColor, .8);
+
+        .text {
+            text-transform: uppercase;
+        }
+
+        &:hover {
+
+            background-color: rgba($subFColor, 1);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.hamburger-icon {
+    // padding: .5em;
+    outline: none;
+    text-align: center;
+    border: none;
+
+    &.navbar-toggler {
+
+        padding: .25rem .75rem .25rem 0;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+    .icon {
+        text-align: center;
+        color: $mainFColor;
+
+
+
+
+
+    }
+}
