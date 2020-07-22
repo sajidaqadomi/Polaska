@@ -2,12 +2,21 @@
     text-align: center;
 
     .upper-title {
-        font-size: 24px;
-        line-height: 1.33;
-        letter-spacing: 5px;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 3.33px;
+        text-transform: uppercase;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media #{$minMed} {
+            font-size: 24px;
+            line-height: 1.33;
+            letter-spacing: 5px;
+
+
+        }
 
         .line {
             display: inline-block;
@@ -27,20 +36,39 @@
 
     .title {
         //font-family: Cochin;
-        font-size: 56px;
+        font-size: 38px;
         // font-weight: bold;
         font-style: italic;
-        line-height: 1.07;
-        margin-bottom: 60px;
+        line-height: 1.05;
+        margin-bottom: 44px;
+
+        @media #{$minMed} {
+            font-size: 56px;
+            line-height: 1.07;
+            margin-bottom: 60px;
+
+        }
     }
 
     .category-list {
         width: 80%;
         margin: auto;
-        margin-bottom: 65px;
+        margin-bottom: 4px;
+
+        @media #{$minMed} {
+            margin-bottom: 65px;
+
+        }
 
         .list-item {
-            margin: 10px;
+            margin: 0 10px 32px 10px;
+
+            @media #{$minMed} {
+                margin: 10px;
+
+
+
+            }
 
             .list-link {
                 img {
@@ -68,9 +96,14 @@
     }
 
     .btn {
-        padding: 24px 47px;
+        padding: 20px 43px;
         letter-spacing: 1px;
         background-color: rgba($subFColor, .8);
+
+        @media #{$minMed} {
+            padding: 24px 47px;
+
+        }
 
         .text {
             text-transform: uppercase;

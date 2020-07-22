@@ -6,7 +6,7 @@
     <title>Polska</title>
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
-    <link rel="stylesheet" href="webfontkit-20200714-142809/stylesheet.css" />
+    <link rel="stylesheet" href="webfonts2/stylesheet.css" />
     <link rel="stylesheet" href="css/vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="css/vendors/jquery.multilevelpushmenu.css" />
     <link
@@ -25,51 +25,56 @@
     <header class="header">
       <div class="header-content">
         <div class="upper-header">
-          <div class="custom-container">
-            <div
-              class="row justify-content-between justify-content-lg-between align-items-center no-gutters"
-            >
-              <div class="col-6 col-md-2 col-lg-2">
-                <ul class="icons-list list left">
-                  <li class="icons-item">
-                    <a href="#" class="icon-link link">
-                      <img src="imgs/makeup-artists.svg" alt="makeup-artists" />
-                      <span class="icon-desc d-none d-lg-block">
-                        Makeup Artists
-                      </span>
-                    </a>
-                  </li>
+          <div class="wrapper d-none d-md-block">
+            <div class="custom-container">
+              <div
+                class="row justify-content-between justify-content-lg-between align-items-center no-gutters"
+              >
+                <div class="col-6 col-md-3">
+                  <ul class="icons-list list left">
+                    <li class="icons-item">
+                      <a href="#" class="icon-link link">
+                        <img
+                          src="imgs/makeup-artists.svg"
+                          alt="makeup-artists"
+                        />
+                        <span class="icon-desc d-block">
+                          Makeup Artists
+                        </span>
+                      </a>
+                    </li>
 
-                  <li class="icons-item">
-                    <a href="tel:123-456-7890" class="icon-link link"
-                      ><img src="imgs/phone.svg" alt="Phone" /><span
-                        class="icon-desc d-none d-lg-block"
-                        >Call Us
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="d-none d-md-block col-md-8">
-                <div class="logo-img">
-                  <img src="imgs/logo.svg" alt="logo" />
+                    <li class="icons-item">
+                      <a href="tel:123-456-7890" class="icon-link link"
+                        ><img src="imgs/phone.svg" alt="Phone" /><span
+                          class="icon-desc d-block"
+                          >Call Us
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <div class="col-6 col-md-2 col-lg-2">
-                <ul class="icons-list list right">
-                  <li class="icons-item cart" data-cart="5">
-                    <a href="#" class="icon-link link">
-                      <img src="imgs/cart.svg" alt="makeup-artists" />
-                      <span class="icon-desc d-none d-lg-block">cart </span>
-                    </a>
-                  </li>
-                  <li class="icons-item">
-                    <a href="#" class="icon-link link"
-                      ><img src="imgs/account.svg" alt="acount" />
-                      <span class="icon-desc d-none d-lg-block">hi sara</span>
-                    </a>
-                  </li>
-                </ul>
+                <div class="d-none d-md-block col-md-6">
+                  <div class="logo-img">
+                    <img src="imgs/logo.svg" alt="logo" />
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <ul class="icons-list list right">
+                    <li class="icons-item cart" data-cart="5">
+                      <a href="#" class="icon-link link">
+                        <img src="imgs/cart.svg" alt="makeup-artists" />
+                        <span class="icon-desc d-block">cart </span>
+                      </a>
+                    </li>
+                    <li class="icons-item">
+                      <a href="#" class="icon-link link"
+                        ><img src="imgs/account.svg" alt="acount" />
+                        <span class="icon-desc d-block">hi sara</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -79,7 +84,7 @@
             <div
               class="row justify-content-between align-items-center no-gutters"
             >
-              <div class="col-4 col-md-11 col-lg-9">
+              <div class="col-2 col-md-12 col-lg-9">
                 <nav
                   class="navbar navbar-expand-md navbar-light d-none d-md-flex"
                 >
@@ -117,27 +122,43 @@
                   </div>
                 </nav>
                 <button
-                  class="navbar-toggler d-flex d-md-none hamburger-icon align-items-center justify-content-center"
+                  class="navbar-toggler d-flex flex-column d-md-none hamburger-icon"
                   type="button"
                   data-target="#minue"
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  <i class="fa fa-bars icon fa-1x"></i>
+                  <!-- <i class="fa fa-bars icon fa-1x"></i> -->
+                  <img src="imgs/mobile/header/menu.svg" alt="hamburger-icon" />
+                  <span class="d-block icon-desc">Menu</span>
                 </button>
+              </div>
+              <div class="col-2 d-flex d-md-none justify-content-center">
+                <ul class="icons-list list mobile">
+                  <li class="icons-item">
+                    <a href="#" class="icon-link link">
+                      <img
+                        src="imgs/mobile/header/makeup-artists.svg"
+                        alt="makeup-artists"
+                      />
+                      <span class="d-block icon-desc">
+                        Artists
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               </div>
               <div class="col-4 d-inline-block d-md-none">
                 <div class="logo-img">
-                  <img src="imgs/logo.svg" alt="logo" />
+                  <img src="imgs/mobile/header/logo.svg" alt="logo" />
                 </div>
               </div>
 
-              <div class="col-4 col-md-1 col-lg-3">
+              <div class="col-4 col-md-0 col-lg-3">
                 <form class="search-form d-none d-lg-flex">
-                  <div class="search-icon m-0">
-                    <img src="imgs/search.svg" alt="search" />
-                  </div>
+                  <img src="imgs/search.svg" alt="search" class="search-icon" />
+
                   <input
                     type="text"
                     class=""
@@ -145,7 +166,9 @@
                   />
                   <div class="line"></div>
                 </form>
-                <div class="search-icon d-flex d-lg-none justify-content-end">
+                <!-- <div
+                  class="search-icon d-none d-md-flex d-lg-none justify-content-end"
+                >
                   <a
                     href="#search-area"
                     class="link-search"
@@ -159,63 +182,125 @@
                       class="d-block ml-auto"
                     />
                   </a>
-                </div>
+                </div> -->
+
+                <ul
+                  class="icons-list list d-flex d-md-none justify-content-between"
+                >
+                  <li class="icons-item menu-hide">
+                    <a href="tel:123-456-7890" class="icon-link link"
+                      ><img
+                        src="imgs/mobile/header/phone.svg"
+                        alt="Phone"
+                      /><span class="icon-desc d-block">Call Us </span>
+                    </a>
+                  </li>
+                  <li class="icons-item cart menu-hide" data-cart="5">
+                    <a href="#" class="icon-link link">
+                      <img
+                        src="imgs/mobile/header/cart.svg"
+                        alt="makeup-artists"
+                      />
+                      <span class="icon-desc d-block">cart </span>
+                    </a>
+                  </li>
+                  <li class="icons-item d-none mobile-acount menu-hide ml-auto">
+                    <a href="#" class="icon-link link">
+                      <span class="icon-desc">hi sara</span>
+                      <img src="imgs/mobile/header/account.svg" alt="acount" />
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="form-wrapper d-lg-none collapse" id="search-area">
-        <form class="search-form mobile m-0">
-          <!-- <p class="search-icon m-0">
-            <img src="imgs/search.svg" alt="search" />
-          </p> -->
-          <input
-            type="text"
-            class=""
-            placeholder="Search for product, brand, ..etc"
-          />
-          <!-- <div class="line"></div> -->
-        </form>
-      </div>
     </header>
+    <div class="form-wrapper d-lg-none" id="search-area">
+      <form class="search-form mobile m-0">
+        <img
+          class="search-icon"
+          src="imgs/mobile/header/search.svg"
+          alt="search"
+        />
+
+        <input
+          type="text"
+          class=""
+          placeholder="Search for product, brand, ..etc"
+        />
+        <!-- <div class="line"></div> -->
+      </form>
+    </div>
     <div id="menu" class="d-flex d-md-none">
       <nav>
         <ul class="nav-list list">
-          <li class="list-item">
-            <a href="#" class="link mainlink"
-              >Home <i class="fa fa-angle-right icon"></i
-            ></a>
-          </li>
           <li class="list-item active">
-            <a href="./pdp.html" class="link mainlink"
-              >Products <i class="fa fa-angle-right icon"></i
-            ></a>
+            <a href="#" class="link mainlink menu-link lm-link"
+              >Products
+              <div class="drop-container">
+                <img
+                  src="./imgs/mobile/menu/ic-dropdwon.svg"
+                  alt="ic-dropdwon"
+                />
+              </div>
+            </a>
           </li>
           <li class="list-item">
-            <a href="#" class="link mainlink"
-              >Online Catalogues <i class="fa fa-angle-right icon"></i
-            ></a>
+            <a href="#" class="link mainlink menu-link lm-link"
+              >Online Catalogues
+              <div class="drop-container">
+                <img
+                  src="./imgs/mobile/menu/ic-dropdwon.svg"
+                  alt="ic-dropdwon"
+                />
+              </div>
+            </a>
           </li>
           <li class="list-item">
-            <a href="#" class="link mainlink"
-              >Find our Stores <i class="fa fa-angle-right icon"></i
-            ></a>
+            <a href="#" class="link mainlink menu-link lm-link"
+              >Find our Stores
+              <div class="drop-container">
+                <img
+                  src="./imgs/mobile/menu/ic-dropdwon.svg"
+                  alt="ic-dropdwon"
+                />
+              </div>
+            </a>
           </li>
           <li class="list-item">
-            <a href="#" class="link mainlink"
-              >New Products <i class="fa fa-angle-right icon"></i
-            ></a>
+            <a href="#" class="link mainlink menu-link lm-link"
+              >New Products
+              <div class="drop-container">
+                <img
+                  src="./imgs/mobile/menu/ic-dropdwon.svg"
+                  alt="ic-dropdwon"
+                />
+              </div>
+            </a>
           </li>
           <li class="list-item">
-            <a href="#" class="link mainlink"
-              >About Us <i class="fa fa-angle-right icon"></i
-            ></a>
+            <a href="#" class="link mainlink menu-link lm-link"
+              >About Us
+              <div class="drop-container">
+                <img
+                  src="./imgs/mobile/menu/ic-dropdwon.svg"
+                  alt="ic-dropdwon"
+                />
+              </div>
+            </a>
           </li>
           <li class="list-item">
-            <a href="#" class="link mainlink">
-              Contact Us <i class="fa fa-angle-right icon"></i
-            ></a>
+            <a href="#" class="link mainlink menu-link lm-link">
+              Contact Us
+              <div class="drop-container">
+                <img
+                  src="./imgs/mobile/menu/ic-dropdwon.svg"
+                  alt="ic-dropdwon"
+                />
+              </div>
+            </a>
           </li>
         </ul>
       </nav>
@@ -228,7 +313,16 @@
           <div class="content-wrapping">
             <div class="content">
               <div class="img-container">
-                <img src="./imgs/nouba.png" alt="nouba" />
+                <img
+                  src="./imgs/nouba.png"
+                  alt="nouba"
+                  class="d-none d-md-flex"
+                />
+                <img
+                  src="./imgs/mobile/home/nouba.png"
+                  alt="nouba"
+                  class="d-flex d-md-none"
+                />
               </div>
               <div class="desc">
                 <p class="m-0">
@@ -274,7 +368,7 @@
           </h3>
           <h2 class="title">Categories</h2>
           <ul
-            class="category-list list d-flex justify-content-around flex-wrap"
+            class="category-list list d-flex justify-content-between justify-content-md-around flex-wrap"
           ></ul>
           <button class="btn">
             <span class="text">all categories</span>
@@ -287,31 +381,37 @@
       <div class="custom-container">
         <div class="content">
           <div class="row no-gutters">
-            <div class="col-10 col-md-4">
+            <div class="col-12 col-md-5">
               <div class="logo-img logo-footer">
                 <img src="imgs/logo.svg" alt="logo" />
               </div>
-              <div class="footer-links d-flex">
+              <div
+                class="footer-links d-flex flex-column flex-md-row align-items-center"
+              >
                 <ul class="list">
                   <li class="list-item">
-                    <a href="#" class="link mainlink">Products</a>
+                    <a href="#" class="link mainlink lm-link">Products</a>
                   </li>
                   <li class="list-item">
-                    <a href="#" class="link mainlink">Online Catalogues</a>
+                    <a href="#" class="link mainlink lm-link"
+                      >Online Catalogues</a
+                    >
                   </li>
                   <li class="list-item">
-                    <a href="#" class="link mainlink">Find our Stores</a>
+                    <a href="#" class="link mainlink lm-link"
+                      >Find our Stores</a
+                    >
                   </li>
                 </ul>
                 <ul class="list">
                   <li class="list-item">
-                    <a href="#" class="link mainlink">New Products</a>
+                    <a href="#" class="link mainlink lm-link">New Products</a>
                   </li>
                   <li class="list-item">
-                    <a href="#" class="link mainlink">About Us</a>
+                    <a href="#" class="link mainlink lm-link">About Us</a>
                   </li>
                   <li class="list-item">
-                    <a href="#" class="link mainlink">Contact Us</a>
+                    <a href="#" class="link mainlink lm-link">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -319,14 +419,14 @@
                 © 2020 Polska Cosmetics
               </div>
             </div>
-            <div class="col-md-4 d-none d-md-flex align-self-end">
+            <div class="col-md-2 d-none d-md-flex align-self-end">
               <div class="privacy-content">
                 <a href="#" class="link"
                   >Privacy<span class="privacy-sepratator"></span>Terms</a
                 >
               </div>
             </div>
-            <div class="col-12 col-md-2 offset-md-2">
+            <div class="col-12 col-md-auto ml-md-auto">
               <div class="footerContact">
                 <div class="tel-number">
                   <a href="#" class="link">+972 59-237-0033</a>
@@ -360,16 +460,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 d-flex d-md-none mb-1">
-              <div class="copyright d-block d-md-none">
-                <p class="m-0">© 2020 Polska Cosmetics</p>
-              </div>
-            </div>
             <div class="col-12 d-flex d-md-none">
               <div class="privacy-content">
                 <a href="#" class="link"
                   >Privacy<span class="privacy-sepratator"></span>Terms</a
                 >
+              </div>
+            </div>
+            <div class="col-12 d-flex d-md-none justify-content-center">
+              <div class="copyright d-block d-md-none">
+                <p class="m-0">© 2020 Polska Cosmetics</p>
               </div>
             </div>
           </div>
@@ -380,7 +480,7 @@
     <script src="js/vendors/jquery.min.js"></script>
     <script>
       $(function () {
-        // $("#header").load("components/header.html");
+        $("#header").load("header.html");
         // $("#footer").load("components/footer.html");
       });
     </script>

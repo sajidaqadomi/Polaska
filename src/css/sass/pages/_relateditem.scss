@@ -12,7 +12,13 @@
         .card {
 
             .cart {
-                background-color: $mainBColor;
+
+                //
+                @media #{$minMed} {
+                    background-color: $mainBColor;
+
+
+                }
 
                 &:hover {
                     box-shadow: 1px 2px 15px rgba($mainBColor, .2);
@@ -22,8 +28,14 @@
             }
 
             .img-container {
-                height: 256px; //
-                width: 122px; //  
+                width: 71px;
+                height: 148px;
+
+                @media #{$minMed} {
+                    height: 256px; //
+                    width: 122px; //  
+
+                }
             }
 
             .card-footer {

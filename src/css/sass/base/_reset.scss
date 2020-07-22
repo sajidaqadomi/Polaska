@@ -47,9 +47,33 @@ ol {
                 }
 
                 &.mainlink {
+                    display: flex;
                     text-transform: uppercase;
                     color: $mainFColor;
                     font-size: 13px;
+
+                    &.lm-link {
+                        font-size: 16px;
+
+                    }
+
+
+                    @media #{$minMed} {
+                        font-size: 13px;
+
+                        &.lm-link {
+                            font-size: 13px;
+
+                        }
+
+                    }
+
+                    &.menu-link {
+                        color: $mainBColor;
+
+
+
+                    }
                 }
 
             }
@@ -96,37 +120,51 @@ input {
 }
 
 .custom-container {
-    max-width: 95vw;
-    margin: auto;
+    max-width: 100vw;
+    padding-left: 15px;
+    padding-right: 15px;
 
     &.s-both {
-        max-width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
 
     }
 
     @media #{$minMed} {
-        max-width: 90vw;
-        margin: auto;
+        &.s-both {
+            padding-left: 60px;
+            padding-right: 60px;
+
+        }
+
+        padding-left: 60px;
+        padding-right: 60px;
+        //  max-width: 90vw;
+        //  margin: auto;
 
         &.left {
-            max-width: 95vw;
-            margin-right: auto;
-            margin-left: 0;
+            // max-width: 95vw;
+            // margin-right: auto;
+            // margin-left: 0;
+            padding-left: 0;
 
         }
 
         &.right {
-            max-width: 95vw;
-            margin-left: auto;
-            margin-right: 0;
+            //max-width: 95vw;
+            //margin-left: auto;
+            // margin-right: 0;
+            padding-right: 0;
 
         }
 
         &.both {
-            max-width: 100vw;
+            // max-width: 100vw;
+            padding-left: 0;
+            padding-right: 0;
 
             .slick-space {
-                width: calc(95vw/4);
+                width: calc((100vw - 60px)/4);
             }
 
 

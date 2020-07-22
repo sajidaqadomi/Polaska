@@ -1,0 +1,86 @@
+.icons-list {
+    display: flex;
+    //justify-content: space-around;
+
+    .icons-item {
+        text-align: center;
+        color: $mainFColor;
+        // cursor: pointer;
+        position: relative;
+        transition: all .3s ease-in-out;
+
+        .icon-link {
+            display: block;
+
+            img {
+                margin-bottom: 4px;
+            }
+        }
+
+        &.mobile-acount {
+            img {
+                margin-left: 4px;
+            }
+        }
+
+        &:not(.cart) {
+            &:hover {
+                color: $subFColor;
+
+                .icon {
+                    color: $subFColor;
+                }
+
+            }
+
+        }
+
+
+
+        &.cart {
+            cursor: default;
+
+            &:before {
+                content: attr(data-cart);
+                position: absolute;
+                top: -40%;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 13px;
+                font-weight: 600;
+                line-height: 1.54;
+                color: $subFColor;
+
+            }
+
+        }
+
+
+
+
+    }
+
+
+
+
+
+    &.right {
+        justify-content: flex-end;
+
+        .icons-item {
+            margin-left: 24px;
+        }
+    }
+
+    &.left {
+        justify-content: flex-start;
+
+        .icons-item {
+            margin-right: 24px;
+        }
+    }
+}
+
+.icon-desc {
+    @extend %smallfontstyle;
+}

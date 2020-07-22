@@ -1,14 +1,32 @@
 .buy-product {
+    @import '../components/productinfo';
     height: 100%;
-    padding-top: 2em; //formobile
+    padding: 24px 15px 33px 15px;
+    // padding-top: 2em; //formobile
+    // padding-left: 15px; //mobile
+    // padding-right: 15px; //mobile
 
     @media #{$minMed} {
         border-left: 1px solid $mainGColor;
-        padding-left: 2em;
+        padding-left: 84px;
     }
 
     .item {
-        margin-bottom: 1em; //for mobile
+
+        // margin-bottom: 24px; //for mobile
+        &.quantity {
+            margin-bottom: 24px
+        }
+
+        &.product-actions {
+            margin-bottom: 40px;
+        }
+
+        &.rate {
+            margin-bottom: 36px;
+
+        }
+
 
         @media #{$minMed} {
             margin-bottom: 0;
@@ -17,10 +35,10 @@
         }
 
         .name {
-            margin-right: 20px;
+            margin-right: 15px;
 
             @media #{$minMed} {
-                margin-right: 15px;
+                // margin-right: 15px;
 
                 // padding-top: 0;
 
@@ -30,45 +48,48 @@
         }
     }
 
-    .product-info {
-        margin-bottom: 12px;
+    //@import '../components/productinfo';
+
+    // .product-info {
+    //     margin-bottom: 12px;
 
 
 
-        * {
+    //     * {
 
-            font-weight: bold;
-            line-height: 1.33;
+    //         font-weight: bold;
+    //         line-height: 1.33;
 
-        }
+    //     }
 
-        .name {
-            font-size: 1.125em;
-        }
+    //     .name {
+    //         font-size: 1.125em;
+    //     }
 
-        .price {
+    //     .price {
 
-            font-size: 1.25em;
-        }
+    //         font-size: 1.25em;
+    //         line-height: normal;
+    //     }
 
-    }
+    // }
 
-    .quiz {
-        .name {
-            @extend %namefont;
-            color: $subFColor;
-        }
+    // .quiz {
+    //     .name {
+    //         @extend %namefont;
+    //         color: $subFColor;
+    //     }
 
-        .code {
-            font-size: .875em;
-            font-weight: 600;
-            line-height: 1.71;
+    //     .code {
+    //         font-size: .875em;
+    //         font-weight: 600;
+    //         line-height: 1.71;
 
-            .text {
-                font-weight: normal;
-            }
-        }
-    }
+    //         .text {
+    //             font-weight: normal;
+    //         }
+    //     }
+    // }
 
     .quantity {
         .name {
@@ -91,14 +112,21 @@
             }
 
             .number {
-                font-size: 20px;
+                font-size: 22px;
                 font-weight: 600;
                 width: 68px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: rgba($mainGColor, .31);
-                margin: 0 1em;
+                margin: 0 24px;
+
+                @media #{$minMed} {
+                    margin: 0 1em;
+                    font-size: 20px;
+
+
+                }
             }
         }
     }
@@ -187,7 +215,12 @@
 
         .social-list {
             .item {
-                margin-right: 17px;
+                margin-right: 27px;
+
+                @media #{$minMed} {
+                    margin-right: 17px;
+
+                }
             }
         }
     }

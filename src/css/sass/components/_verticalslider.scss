@@ -1,9 +1,18 @@
 .colors-types {
+    padding: 2px 15px 24px 15px;
 
-    padding-top: 8px;
 
     @media #{$minMed} {
-        padding-top: 0;
+        padding: 0;
+
+
+    }
+
+    .name {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 12px; //mobile
 
     }
 
@@ -21,26 +30,69 @@
 
     }
 
+    .slick-list {
+        overflow: hidden;
+        margin: 0 -4px;
+
+        width: calc(100% + 4px);
+        /* add double the px size of slide space */
+
+        @media #{$minMed} {
+            margin: 0;
+            width: 100%;
+            margin: 0;
+        }
+
+
+    }
+
     .slick-slider {
         width: 100%;
+
         // &.vertical {
         //     @media #{$minMed} {
         //         //    width: 90% !important;
         //     }
+        .slick-slide {
+            padding: 0 2px;
+            // box-sizing: border-box;
+
+            // &[data-slick-index='0'] {
+            //     padding-left: 0px;
+
+            // }
+
+            @media #{$minMed} {
+                padding: 0;
+            }
+
+        }
 
         .slider-item {
             width: 100%;
-            height: 104px;
+            height: 40px;
+            padding: 12px 8px;
+            @extend %flex-center;
+            font-size: 14px;
+            color: $mainFColor;
 
             @media #{$minMed} {
                 width: 90%;
+                height: 104px;
+                padding: 2em 1em;
+                justify-content: space-between;
+                font-size: 20px;
+                font-weight: 600;
+
+                //@include flexCenter;
+
+
+
             }
 
-            padding: 2em 1em;
-            @include flexCenter;
-            font-size: 1.25em;
-            font-weight: 600;
-            color: $mainFColor;
+
+
+
             cursor: pointer;
             transition: all .3s ease-in-out;
 
@@ -58,14 +110,22 @@
             }
 
             &:hover {
+
+
+                box-shadow: -1px -1px 14px 1px rgba(0, 0, 0, 0.2);
+
                 @media #{$minMed} {
                     width: 100%;
+                    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+
 
                 }
 
             }
 
             &.select {
+                box-shadow: -1px -1px 14px 1px rgba(0, 0, 0, 0.2);
+
                 @media #{$minMed} {
                     width: 100%;
                     // box-shadow: 0 -12px 68px 0 rgba(96, 42, 34, 0.44);
@@ -86,7 +146,14 @@
                 position: relative;
                 padding: 0;
                 object-fit: contain;
-                height: 104px;
+                // height: 40px;
+
+                @media #{$minMed} {
+
+                    height: 104px;
+
+                }
+
                 // width: 90%;
 
                 img {
@@ -100,7 +167,13 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    @include flexCenter;
+                    @extend %flex-center;
+
+                    @media #{$minMed} {
+                        justify-content: space-between;
+
+                    }
+
                     @extend %px;
                 }
             }
@@ -114,4 +187,11 @@
 %px {
     padding-left: 1em;
     padding-right: 1em;
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

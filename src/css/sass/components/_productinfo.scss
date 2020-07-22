@@ -1,0 +1,62 @@
+.quezprice-sec {
+    &.mobile {
+        padding: 20px 15px; //as container
+    }
+
+    .product-info {
+        margin-bottom: 8px;
+
+        @media #{$minMed} {
+            margin-bottom: 12px;
+        }
+
+
+
+
+        * {
+
+            font-weight: bold;
+            line-height: 1.33;
+
+        }
+
+        .name {
+            font-size: 1.125em;
+            margin-right: 20px;
+        }
+
+        .price {
+
+            font-size: 1.25em;
+            line-height: normal;
+        }
+
+    }
+
+    .quiz {
+        .name {
+            @extend %namefont;
+            color: $subFColor;
+        }
+
+        .code {
+            font-size: .875em;
+            font-weight: 600;
+            line-height: 1.71;
+
+            .text {
+                font-weight: normal;
+            }
+        }
+    }
+
+}
+
+%namefont {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.5;
+
+
+
+}

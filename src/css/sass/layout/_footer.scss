@@ -1,9 +1,9 @@
 .footer {
     background-color: rgba($mainBColor, 1);
-    padding-top: 30px; //new
-    padding-bottom: 46px;
+    padding-top: 60px; //new
+    padding-bottom: 40px;
 
-    @media #{minMed} {
+    @media #{$minMed} {
         padding-top: 72px;
         padding-bottom: 56px;
 
@@ -16,15 +16,25 @@
     }
 
     .footer-links {
-        justify-content: space-between;
+        justify-content: start;
 
         .list {
-            margin: 30px 0 32px 0;
+            margin: 0;
 
             @media #{$minMed} {
-                margin: 60px 0 32px 0;
+                margin: 60px 0 24px 0;
+
+                &:first-child {
+                    margin-right: 70px;
+                }
 
             }
+
+
+            // @media #{$minMed} {
+            //     margin: 60px 0 32px 0;
+
+            // }
 
 
             &:first-child {
@@ -34,18 +44,28 @@
             }
 
             .list-item {
-                margin-bottom: 16px;
+                margin-bottom: 20px;
+
 
                 @media #{$minMed} {
-                    margin-bottom: 8px;
+                    margin-bottom: 16px;
+                    text-align: left;
 
                 }
 
                 .link {
                     //transition: all .3s ease-in-out;
                     font-weight: bold;
-                    line-height: 1.23;
-                    letter-spacing: .5px;
+                    line-height: 1;
+                    letter-spacing: .62px;
+                    justify-content: center;
+
+                    @media #{$minMed} {
+                        justify-content: start;
+                        line-height: 1.23;
+                        letter-spacing: .5px;
+
+                    }
 
                     &:hover {
                         color: $subFColor;
@@ -60,9 +80,16 @@
         height: 100%;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+
+        @media #{$minMed} {
+
+            align-items: flex-start;
+
+        }
 
         .tel-number {
-            margin-bottom: 45px;
+            margin-bottom: 48px;
 
             @media #{$minMed} {
                 margin-bottom: 0;
@@ -70,8 +97,13 @@
 
             a {
                 color: rgba($subFColor, .8);
-                line-height: 1.65;
-                font-size: 17px;
+                line-height: 1.75;
+                font-size: 16px;
+
+                @media #{$minMed} {
+                    line-height: 1.65;
+                    font-size: 17px;
+                }
 
                 &:hover {
                     color: rgba($subFColor, 1);
@@ -84,10 +116,12 @@
             // justify-self: end;
 
             .social-title {
-                margin-bottom: 22px;
+                margin-bottom: 28px;
+                text-align: center;
 
-                @media #{menMed} {
+                @media #{$minMed} {
                     margin-bottom: 32px;
+                    text-align: left;
                 }
 
                 color: $mainFColor;
@@ -99,10 +133,21 @@
             }
 
             .social-list {
-                margin-bottom: 22px;
+                margin-bottom: 40px;
 
                 .item {
-                    margin-right: 17px;
+                    margin-right: 27px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    @media #{$minMed} {
+                        //margin-right: 17px;
+
+
+
+                    }
                 }
 
                 @media #{$minMed} {
@@ -152,7 +197,7 @@
 
     .copyright {
         @extend %smallfont;
-        margin: 34px 0 16px 0;
+        margin-top: 16px;
 
         @media #{$minMed} {
             margin: 0;

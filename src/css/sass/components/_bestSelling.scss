@@ -2,16 +2,23 @@
     @include bgImg(url(../imgs/best-sellers-bg.jpg));
 
     .title {
-        font-size: 56px;
-        line-height: 1.07;
-        margin-bottom: 10px;
+        font-size: 32px;
+        line-height: 1.5;
+        margin-bottom: 4px;
         color: $mainFColor;
         font-family: Cochin;
+
+        @media #{$minMed} {
+            font-size: 56px;
+            line-height: 1.07;
+            margin-bottom: 10px;
+
+        }
 
     }
 
     .lower-title {
-        margin-bottom: 70px;
+        margin-bottom: 48px;
 
         @media #{$minMed} {
             margin-bottom: 107px;
@@ -21,9 +28,16 @@
         color: $mainFColor;
 
         .sub-title {
-            font-size: 17px;
-            line-height: 1.65;
+            font-size: 14px;
+            line-height: 1.14;
             text-transform: initial;
+
+            @media #{$minMed} {
+                font-size: 17px;
+                line-height: 1.65;
+
+            }
+
             //color: $mainFColor;
         }
 
@@ -45,8 +59,8 @@
         }
 
         .img-container {
-            height: 252px;
-            width: 150px;
+            height: 148px;
+            width: 71px;
             margin-top: 8px;
 
             @media #{$minMed} {
@@ -60,7 +74,7 @@
         }
 
         .card-body {
-            padding: .75rem 1.25rem 1rem; //update bootstrab
+            padding: .75rem 0 1rem; //update bootstrab
 
         }
 

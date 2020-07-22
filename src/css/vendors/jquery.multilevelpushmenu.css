@@ -1,7 +1,7 @@
 .multilevelpushmenu_wrapper {
 	position: absolute;
 	overflow: hidden;
-	min-width: 100vw;
+	/* min-width: 100vw; */
 	min-height: 100%;
 	margin: 0;
 	padding: 0;
@@ -11,7 +11,7 @@
 	position: absolute;
 	overflow: hidden;
 	top: 0;
-	background: #edb15d;
+	background: #ffffff;
 	width: 100vw;
 	min-height: 100%;
 	height: auto;
@@ -40,7 +40,7 @@
 }
 
 .multilevelpushmenu_wrapper .multilevelpushmenu_inactive {
-	background: #edb15d;
+	background: #ffffff;
 }
 
 .multilevelpushmenu_wrapper h2 {
@@ -57,9 +57,9 @@
 
 .multilevelpushmenu_wrapper li {
 	cursor: pointer;
-	border-top: 1px solid rgba(0, 0, 0, .6);
+	border-top: 1px solid rgba(0, 0, 0, .1);
 	transition: all .3s ease-in-out;
-	padding: .4em .4em .4em .4em;
+	/* padding: .4em .4em .4em .4em; */
 }
 
 .multilevelpushmenu_wrapper li:first-child {
@@ -67,7 +67,7 @@
 }
 
 .multilevelpushmenu_wrapper li:last-child {
-	border-bottom: 1px solid rgba(0, 0, 0, .6);
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 .multilevelpushmenu_wrapper li:hover {
@@ -79,14 +79,13 @@
 	display: flex;
 	outline: none;
 	overflow: hidden;
-	font-size: 13px;
-	line-height: 1em;
-	padding: 12px 15px;
+	font-size: 16px;
+	line-height: 1;
+	padding: 20px 16px;
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: 600;
 	justify-content: space-between;
 	align-items: center;
-	color: #ffffff;
 }
 
 .multilevelpushmenu_wrapper a:hover {
@@ -95,8 +94,8 @@
 
 .multilevelpushmenu_wrapper .backItemClass {
 	display: block;
-	padding: .4em .4em .4em .4em;
-	background: #edb15d;
+	/* padding: .4em .4em .4em .4em; */
+	background: #ffffff;
 	border-top: 1px solid #edb15d;
 }
 

@@ -1,6 +1,6 @@
 html {
     body {
-        font-family: Eina03;
+        font-family: 'Eina 03';
 
         iframe {
             border: 0;
@@ -12,29 +12,33 @@ html {
 }
 
 section {
-    padding: 2em 0;
+    padding: 60px 0; //related sec
     border-bottom: 1px solid rgba($mainGColor, 1);
 
     &.products {
-        padding-top: 0;
+        padding: 0;
     }
 
     .title {
-        font-size: 40px;
+        font-size: 32px;
+        line-height: 1.75;
         margin-bottom: .7em;
         font-family: Cochin;
+        font-weight: bold;
+        margin-bottom: 16px;
 
         @media #{$minMed} {
             font-size: 48px;
+            line-height: 1.17;
             margin-bottom: 26px;
 
             &.related {
                 margin-bottom: 40px;
+
             }
         }
 
-        font-weight: bold;
-        line-height: 1.17;
+
     }
 
     @media #{$minMed} {
@@ -87,7 +91,7 @@ section {
 
             .card-wrapper {
                 height: inherit;
-                margin: 0 15px 0 15px;
+                margin: 0 0 0 10px;
 
                 //large
                 @media #{$minMed} {
@@ -107,11 +111,19 @@ section {
     .card {
         // min-height: 468px;
         height: 100%;
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 10px;
+        padding-right: 10px;
+
         border-radius: 0px;
         border: 1px solid rgba($subGColor, 1); //same
+
         /* border-radius: .25rem;*/
+        @media #{$minMed} {
+            padding-left: 1em;
+            padding-right: 1em;
+
+
+        }
 
         transition: all .5s ease-in-out;
 
@@ -143,9 +155,9 @@ section {
 
 
         .img-container {
-            margin-top: 8px; //??
+            // margin-top: 8px; //??
             display: block; //same
-            margin: auto; //same
+            margin: 8px auto 0; //same
 
             img {
                 max-height: 100%; //glopal
@@ -155,7 +167,7 @@ section {
         }
 
         .card-body {
-            padding: .75rem 1.25rem 1rem; //update bootstrap
+            padding: .75rem 0 1rem; //update bootstrap
             border-bottom: 1px solid rgba($mainBColor, .1); //same
             display: flex;
             justify-content: center;
@@ -166,9 +178,16 @@ section {
                 color: $mainBColor;
                 font-weight: 600;
                 line-height: 1.5;
-                letter-spacing: 0.3px;
+                letter-spacing: 0.23px;
                 word-wrap: break-word;
-                font-size: 1em;
+                font-size: 12px;
+
+                @media #{$minMed} {
+                    font-size: 16px;
+
+                    letter-spacing: 0.3px;
+
+                }
 
                 &:hover {
                     color: $subFColor;
@@ -182,23 +201,54 @@ section {
         .card-footer {
             //same
             background-color: $mainFColor;
-            padding: 15px 0 33px 0;
+            padding: 11px 0 11px 0;
+            text-align: center;
+
+            @media #{$minMed} {
+
+                padding: 15px 0 33px 0;
+            }
 
             .type {
-                font-size: .75em;
-                line-height: 2;
-                letter-spacing: 0.4px;
-                margin-bottom: 36px;
+                font-size: 11px;
+                line-height: 1.18;
+                letter-spacing: 0.37px;
+                margin-bottom: 16px;
+                height: 30px;
+
+                @media #{$minMed} {
+                    font-size: 12px;
+                    line-height: 2;
+                    letter-spacing: 0.4px;
+                    margin-bottom: 36px;
+
+                }
 
 
             }
 
             .desc {
-                font-size: .875em;
+                font-size: 14px;
                 font-weight: bold;
-                line-height: 1.14;
+                line-height: .64;
                 letter-spacing: 0.5px;
+                justify-content: center;
+
+
+                @media #{$minMed} {
+                    line-height: 1.14;
+
+                }
             }
         }
+    }
+}
+
+.s-border {
+    border-bottom: 1px solid rgba($mainBColor, .1);
+
+    @media #{$minMed} {
+        border-bottom: 0;
+
     }
 }

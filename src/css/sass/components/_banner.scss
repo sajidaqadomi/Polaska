@@ -6,7 +6,7 @@
     background-position: center;
 
     .content-wrapping {
-        padding: 13.45vh 0 13.45vh 0;
+        padding: 51px 0 45px 0;
         margin-left: 0;
 
         @media #{$minMed} {
@@ -27,19 +27,33 @@
             .img-container {
                 width: 95%;
                 height: 152px;
+                margin: auto;
+
+                img {
+                    margin: auto;
+
+                }
 
                 @media #{$minMed} {
                     width: 369px;
                 }
 
-                margin: auto;
+
             }
 
             .desc {
-                margin: 40px auto;
-                font-size: 17px;
-                line-height: 1.65;
+                margin: 16px auto 45px;
+                font-size: 16px;
+                line-height: 1.5;
                 color: $mainFColor;
+
+                @media #{$minMed} {
+                    font-size: 17px;
+                    line-height: 1.65;
+                    margin: 40px auto;
+
+
+                }
 
                 .offer {
                     font-weight: bold;
@@ -62,7 +76,8 @@
 
                 &:hover {
                     background-color: rgba($mainFColor, 1);
-                    border: 2px solid rgba($subFColor, 1);
+                    color: $mainBColor;
+                    border: 1px solid rgba($mainBColor, 1);
 
                 }
             }

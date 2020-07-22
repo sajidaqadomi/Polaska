@@ -36,8 +36,9 @@ $(function () {
     //************header******************************************************************************/
     //************search icon**********/
     //
-    function controlSearchicon(icon) {
-        icon.hasClass('fa-arrow-left') ? searchIcon.fadeOut(100) : searchIcon.fadeIn(100);
+    function controlShowicon(icon) {
+        // icon.hasClass('fa-arrow-left') ? searchIcon.fadeOut(100) : searchIcon.fadeIn(100);
+        $('.menu-hide').toggleClass('d-none');
     }
 
 
@@ -60,7 +61,8 @@ $(function () {
         $('#menu').multilevelpushmenu(
             {
                 container: $('#menu'),
-                collapsed: true,
+                fullCollapse: true,//hide all                                    // set to true to fully hide base level holder when collapsed
+                collapsed: false,
                 menuWidth: '100%', //to polaska 
                 overlapWidth: 0, //to hide small element
                 mode: 'cover',
@@ -68,14 +70,14 @@ $(function () {
                 backItemClass: 'backItemClass',                            // CSS class for back menu item.
                 backItemIcon: 'fa fa-angle-left',                         // FontAvesome icon used for back menu item.
                 groupIcon: '',
-                preventItemClick: true,                                    // set to false if you do not need event callback functionality per item click
-                preventGroupItemClick: true,                               // set to false if you do not need event callback functionality per group item click
+                preventItemClick: false,                                    // set to false if you do not need event callback functionality per item click
+                preventGroupItemClick: false,                               // set to false if you do not need event callback functionality per group item click
                 direction: 'ltr',                                          // set to 'rtl' for reverse sliding direction
-                fullCollapse: true,//hide all                                    // set to true to fully hide base level holder when collapsed
                 swipe: 'none'
 
             }
         );
+        $('#menu').multilevelpushmenu('collapse')
 
     }
     function setTopValue() {
@@ -89,10 +91,10 @@ $(function () {
     ///////////////////////////////
     hamburgerIcon.on('click', function () {
 
-        $(this).find('.icon').toggleClass('fa-arrow-left  fa-bars');
+        // $(this).find('.icon').toggleClass('fa-arrow-left  fa-bars');
         menu.toggleClass('expand');
         $('#menu').hasClass('expand') ? $('#menu').multilevelpushmenu('expand') : $('#menu').multilevelpushmenu('collapse');
-        controlSearchicon($(this).find('.icon'));
+        controlShowicon();
     })
 
 
@@ -130,9 +132,10 @@ $(function () {
                     settings: {
                         vertical: false,
                         arrows: false,
-                        centerMode: true,
+                        centerMode: false,
+                        // infinite: false,
                         // centerPadding: '40px',
-                        slidesToShow: 1,
+                        // slidesToShow: 1,
                         slidesToScroll: 1
                     }
                 }
@@ -184,7 +187,7 @@ $(function () {
                         arrows: false,
                         //  centerMode: true,
                         // centerPadding: '40px',
-                        slidesToShow: 1.5,
+                        slidesToShow: 2.1,
                         slidesToScroll: 1
                     }
                 }
@@ -205,7 +208,7 @@ $(function () {
 
     async function renderIn(parent, items) {
         await items.map(item => {
-            let { src, name, mark, type } = item;
+            let { src, name, mark, mobilemark, type } = item;
             let sliderItem = `<div class="card-wrapper">
              
               <div class="card text-center"">
@@ -216,11 +219,14 @@ $(function () {
             </div>
             <div class="card-footer">
             <h6 class="card-subtitle type">${type}</h6>
-              <p class="desc">${mark}</p>
+              <p class="desc d-none d-md-flex">${mark}</p>
+              <p class="desc d-flex d-md-none">${mobilemark}</p>
             </div>
            
           
-            <div class='cart icon'><img src=${pageID === "home" ? ('imgs/cart-w.svg') : ('imgs/cart(2).svg')} alt='cart'></div>
+            <div class='cart icon d-none d-md-block'><img src=${pageID === "home" ? ('imgs/cart-w.svg') : ('imgs/cart(2).svg')} alt='cart'></div>
+            <div class='cart icon d-block d-md-none'><img src=${pageID === "home" ? ('imgs/cart-w.svg') : ('imgs/mobile/pdp/cart-m.svg')} alt='cart'></div>
+
           </div>
           
            
@@ -256,11 +262,9 @@ $(function () {
 
             let sliderItem = `<div id=${name}>
             <div class='slider-item' data-name=${name} data-deg=${deg}  style=${style}>
-                             <span class="name">${name}</span>
-                             <div class='selected-container'>
+                             <span class="name d-none d-md-flex">${name}</span>
+                             <div class='selected-container d-none d-md-flex'>
                              <img src="imgs/selected.jpg"
-                             srcset="imgs/selected@2x.jpg 2x,
-                                     imgs/selected@3x.jpg 3x"
                              class="Selected">
                               </div>
                              <span class="deg">${deg}</span>
@@ -278,8 +282,8 @@ $(function () {
                                 srcset=${srcset}/>
 
                                 <div class="latte-desc"> 
-                                    <span class="name">${name}</span>
-                                    <div class='selected-container'>
+                                    <span class="name d-none d-md-flex">${name}</span>
+                                    <div class='selected-container d-none d-md-flex'>
                                     <img src="imgs/selected.jpg"
                                     srcset="imgs/selected@2x.jpg 2x,
                                             imgs/selected@3x.jpg 3x"
@@ -315,9 +319,11 @@ $(function () {
             //console.log(item);
             let { src, srcset } = item;
             let sliderItem = `<div class='slider-item'>
-            <img src=${src}
-            srcset=${srcset}
-           />
+           <div class="img-container">
+           <img src=${src}
+           srcset=${srcset}
+          />
+           </div>
            </div>`;
             slickLips.append(sliderItem);
 
@@ -402,9 +408,9 @@ $(function () {
         setTopValue();
     });
     $(window).on('scroll', function () {
-        if (menu.hasClass('expand')) {
-            hamburgerIcon.click();
-        }
+        // if (menu.hasClass('expand')) {
+        //     hamburgerIcon.click();
+        // }
 
         if ($(this).scrollTop() > 150) {
 

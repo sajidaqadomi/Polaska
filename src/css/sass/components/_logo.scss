@@ -4,7 +4,14 @@
     width: 100%;
 
     &.logo-footer {
-        text-align: left;
+        margin-bottom: 44px;
+
+        @media #{$minMed} {
+            text-align: left;
+            margin-bottom: 0; //will chang
+
+        }
+
         // margin-bottom: 1em;
     }
 }
