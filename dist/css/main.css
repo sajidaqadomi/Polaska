@@ -1034,14 +1034,15 @@ header {
         line-height: 1.07;
         margin-bottom: 60px; } }
   .categories .category-list {
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-bottom: 4px; }
     @media (min-width: 768px) {
       .categories .category-list {
+        width: 80%;
         margin-bottom: 65px; } }
     .categories .category-list .list-item {
-      margin: 0 10px 32px 10px; }
+      margin: 0 25px 32px 25px; }
       @media (min-width: 768px) {
         .categories .category-list .list-item {
           margin: 10px; } }
