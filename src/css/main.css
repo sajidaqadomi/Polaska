@@ -549,6 +549,15 @@ header {
       width: 100%;
       height: 40px;
       padding: 12px 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       font-size: 14px;
       color: #ffffff;
       cursor: pointer;
@@ -608,7 +617,16 @@ header {
           top: 0;
           left: 0;
           width: 100%;
-          height: 100%; }
+          height: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
           @media (min-width: 768px) {
             .colors-types .slick-slider .slider-item.latte-img .latte-desc {
               -webkit-box-pack: justify;
@@ -618,17 +636,6 @@ header {
 .colors-types .slick-slider .slider-item.latte-img .latte-desc {
   padding-left: 1em;
   padding-right: 1em; }
-
-.colors-types .slick-slider .slider-item, .colors-types .slick-slider .slider-item.latte-img .latte-desc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
 
 .quezprice-sec.mobile {
   padding: 20px 15px; }
