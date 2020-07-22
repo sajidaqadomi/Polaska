@@ -584,7 +584,8 @@ header {
         transition: all .3s ease-in-out; }
       .colors-types .slick-slider .slider-item:hover {
         -webkit-box-shadow: -1px -1px 14px 1px rgba(0, 0, 0, 0.2);
-                box-shadow: -1px -1px 14px 1px rgba(0, 0, 0, 0.2); }
+                box-shadow: -1px -1px 14px 1px rgba(0, 0, 0, 0.2);
+        border: 1px solid black; }
         @media (min-width: 768px) {
           .colors-types .slick-slider .slider-item:hover {
             width: 100%;
