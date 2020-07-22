@@ -62,7 +62,7 @@ $(function () {
             {
                 container: $('#menu'),
                 fullCollapse: true,//hide all                                    // set to true to fully hide base level holder when collapsed
-                collapsed: false,
+                collapsed: true,
                 menuWidth: '100%', //to polaska 
                 overlapWidth: 0, //to hide small element
                 mode: 'cover',
