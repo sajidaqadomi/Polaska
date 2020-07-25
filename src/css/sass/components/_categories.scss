@@ -51,7 +51,7 @@
     }
 
     .category-list {
-        width: 90%;
+        width: 100%;
         margin: auto;
         margin-bottom: 4px;
 
@@ -63,9 +63,12 @@
 
         .list-item {
             margin: 0 25px 32px 25px;
+            flex: 1 1 35%;
+
 
             @media #{$minMed} {
                 margin: 10px;
+                flex: 1 1 auto;
 
 
 

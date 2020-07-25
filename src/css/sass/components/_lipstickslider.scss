@@ -1,29 +1,27 @@
 .lipsStick {
     overflow: hidden;
+    padding: 13px 0 8px 0;
+
+    @media #{$minMed} {
+        padding: 68px 0 68px 0px;
+    }
 
     .slick-list {
         border-bottom: 1px solid rgba($mainBColor, .1);
 
         @media #{$minMed} {
             border-bottom: 0;
-
         }
 
         .slick-track {
-
             .slider-item {
                 .img-container {
                     width: 311px;
                     height: 310px;
                     margin: auto;
 
-
-
-
                     img {}
                 }
-
-
             }
         }
     }
@@ -31,6 +29,4 @@
     .slick-dotes {
         bottom: -28px;
     }
-
-
 }

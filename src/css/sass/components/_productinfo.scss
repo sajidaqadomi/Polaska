@@ -1,34 +1,32 @@
 .quezprice-sec {
+    font-weight: 600;
+
     &.mobile {
         padding: 20px 15px; //as container
     }
 
     .product-info {
         margin-bottom: 8px;
+        font-weight: bold;
 
         @media #{$minMed} {
             margin-bottom: 12px;
         }
 
-
-
-
-        * {
-
-            font-weight: bold;
-            line-height: 1.33;
-
-        }
-
         .name {
-            font-size: 1.125em;
+            font-size: 18px;
             margin-right: 20px;
+            line-height: 1.33;
         }
 
         .price {
+            font-size: 20px;
 
-            font-size: 1.25em;
-            line-height: normal;
+            .price-unit {
+                font-weight: normal;
+            }
+
+
         }
 
     }
@@ -40,8 +38,8 @@
         }
 
         .code {
-            font-size: .875em;
-            font-weight: 600;
+            font-size: 14px;
+            // font-weight: 600;
             line-height: 1.71;
 
             .text {
@@ -49,14 +47,5 @@
             }
         }
     }
-
-}
-
-%namefont {
-    font-size: 1em;
-    font-weight: 600;
-    line-height: 1.5;
-
-
 
 }

@@ -1,100 +1,52 @@
 .buy-product {
-    @import '../components/productinfo';
+
     height: 100%;
     padding: 24px 15px 33px 15px;
-    // padding-top: 2em; //formobile
-    // padding-left: 15px; //mobile
-    // padding-right: 15px; //mobile
 
     @media #{$minMed} {
         border-left: 1px solid $mainGColor;
-        padding-left: 84px;
+        padding: 68px 0 68px 84.5px;
     }
 
     .item {
-
-        // margin-bottom: 24px; //for mobile
         &.quantity {
-            margin-bottom: 24px
+            margin-bottom: 24px;
+
+            @media #{$minMed} {
+                margin-bottom: 0;
+            }
         }
 
         &.product-actions {
             margin-bottom: 40px;
+
+            @media #{$minMed} {
+                margin-bottom: 0;
+            }
         }
 
         &.rate {
             margin-bottom: 36px;
 
+            @media #{$minMed} {
+                margin-bottom: 0;
+            }
         }
-
 
         @media #{$minMed} {
             margin-bottom: 0;
-            // padding-top: 0;
-
         }
 
         .name {
             margin-right: 15px;
 
-            @media #{$minMed} {
-                // margin-right: 15px;
-
-                // padding-top: 0;
-
-            }
-
-
+            @media #{$minMed} {}
         }
     }
-
-    //@import '../components/productinfo';
-
-    // .product-info {
-    //     margin-bottom: 12px;
-
-
-
-    //     * {
-
-    //         font-weight: bold;
-    //         line-height: 1.33;
-
-    //     }
-
-    //     .name {
-    //         font-size: 1.125em;
-    //     }
-
-    //     .price {
-
-    //         font-size: 1.25em;
-    //         line-height: normal;
-    //     }
-
-    // }
-
-    // .quiz {
-    //     .name {
-    //         @extend %namefont;
-    //         color: $subFColor;
-    //     }
-
-    //     .code {
-    //         font-size: .875em;
-    //         font-weight: 600;
-    //         line-height: 1.71;
-
-    //         .text {
-    //             font-weight: normal;
-    //         }
-    //     }
-    // }
 
     .quantity {
         .name {
             @extend %namefont;
-
         }
 
         .select-number {
@@ -107,7 +59,6 @@
                 &:hover {
                     top: -2px;
                     box-shadow: 1px 2px 12px rgba($mainBColor, .12);
-
                 }
             }
 
@@ -122,9 +73,7 @@
                 margin: 0 24px;
 
                 @media #{$minMed} {
-                    margin: 0 1em;
-                    font-size: 20px;
-
+                    margin: 0 24px;
 
                 }
             }
@@ -138,29 +87,23 @@
             height: 64px;
             @include flexCenter; //
             justify-content: center; //
-            // text-transform: uppercase;
-
 
             &.action-buy {
                 background-color: rgba($subFColor, .8);
-                font-size: 1.125em;
+                font-size: 18px;
                 line-height: 0.89;
                 letter-spacing: 1.29px;
-                margin-bottom: 1em;
+                margin-bottom: 16px;
 
                 &:hover {
                     background-color: rgba($subFColor, 1);
                     box-shadow: 1px 2px 15px rgba($mainBColor, .18);
-
                 }
-
             }
 
             &.add-to-cart {
                 border: 1px solid rgba($mainBColor, 1);
                 color: rgba($mainBColor, 1);
-                // font-size: .875em;
-                // line-height: 1.14;
                 letter-spacing: 1px;
 
                 img {
@@ -174,33 +117,22 @@
                 &:hover {
                     border: 1px solid rgba($subFColor, 1);
                     box-shadow: 1px 2px 15px rgba($mainBColor, .2);
-
-
                 }
-
             }
         }
-
-
     }
 
     .rate {
         .name {
             @extend %namefont;
             text-transform: capitalize;
-
-            // margin-right: .5em;
         }
 
         .rate-list {
             .list-item {
-                margin-right: .75em;
-
-
+                margin-right: 12px;
             }
-
         }
-
     }
 
     .social-contact {
@@ -218,20 +150,9 @@
                 margin-right: 27px;
 
                 @media #{$minMed} {
-                    margin-right: 17px;
-
+                    // margin-right: 17px;
                 }
             }
         }
     }
-
-}
-
-%namefont {
-    font-size: 1em;
-    font-weight: 600;
-    line-height: 1.5;
-
-
-
 }

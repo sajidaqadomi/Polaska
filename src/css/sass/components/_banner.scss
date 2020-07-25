@@ -1,9 +1,6 @@
 .banner {
     //use mixin
-    background-image: url(../imgs/hero-img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include bgImg(url(../imgs/hero-img.jpg));
 
     .content-wrapping {
         padding: 51px 0 45px 0;

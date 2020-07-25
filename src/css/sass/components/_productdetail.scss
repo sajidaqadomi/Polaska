@@ -1,26 +1,14 @@
 .product-details {
-
-    background-image: url('../imgs/product-details-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: left;
-
-    @media #{$minMed} {}
-
-
+    @include bgImg(url('../imgs/product-details-bg.jpg'));
 
     .name {
-        font-size: 16px;
-        font-weight: 600;
+        @extend %namefont;
         margin-bottom: 0;
-        line-height: 1.5;
 
         @media #{$minMed} {
             font-size: 22px;
             line-height: normal;
             margin-bottom: 6px;
-
         }
     }
 
@@ -28,10 +16,7 @@
         line-height: 1.75;
         width: 100%;
 
-
         @media #{$minMed} {
-            text-align: left;
-
             width: 80%;
         }
 

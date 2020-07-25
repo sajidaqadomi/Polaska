@@ -1,26 +1,19 @@
 .colors-types {
-    padding: 2px 15px 24px 15px;
-
+    padding: 5px 15px 24px 15px;
 
     @media #{$minMed} {
         padding: 0;
-
-
     }
 
     .name {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.5;
+        @extend %namefont;
         margin-bottom: 12px; //mobile
 
     }
 
     .arrow {
-        padding: 1em;
+        padding: 12px 24px;
         width: 90%;
-        background-color: rgba($mainFColor, 1);
-        text-align: center;
         justify-content: center;
         box-shadow: 0 40px 43px 0 rgba(0, 0, 0, 0.18);
 
@@ -32,44 +25,30 @@
 
     .slick-list {
         overflow: hidden;
-        margin: 0 -4px;
+        // margin: 0 -4px;
+        // width: calc(100% + 4px); //
 
-        width: calc(100% + 4px);
         /* add double the px size of slide space */
-
         @media #{$minMed} {
             margin: 0;
             width: 100%;
-            margin: 0;
         }
-
-
     }
 
     .slick-slider {
         width: 100%;
 
-        // &.vertical {
-        //     @media #{$minMed} {
-        //         //    width: 90% !important;
-        //     }
         .slick-slide {
-            padding: 0 2px;
-            // box-sizing: border-box;
-
-            // &[data-slick-index='0'] {
-            //     padding-left: 0px;
-
-            // }
+            // margin: 0 2px;
+            margin-right: 4px;
 
             @media #{$minMed} {
-                padding: 0;
+                margin: 0;
             }
-
         }
 
         .slider-item {
-            width: 100%;
+            width: 99%;
             height: 40px;
             padding: 12px 8px;
             display: flex;
@@ -81,19 +60,11 @@
             @media #{$minMed} {
                 width: 90%;
                 height: 104px;
-                padding: 2em 1em;
+                padding: 37px 24px;
                 justify-content: space-between;
                 font-size: 20px;
                 font-weight: 600;
-
-                //@include flexCenter;
-
-
-
             }
-
-
-
 
             cursor: pointer;
             transition: all .3s ease-in-out;
@@ -102,29 +73,34 @@
                 font-weight: normal;
             }
 
+            .color-name {
+                //word-wrap: break-word;
+                //word-break: keep-all;
+                word-break: break-all;
+
+            }
+
             .selected-container {
                 border-radius: 50%;
                 overflow: hidden;
                 opacity: 0;
+                display: none;
                 visibility: hidden;
                 transition: all .3s ease-in-out;
-
+                margin: 0 2px;
             }
 
+
             &:hover {
-
-
-                box-shadow: -1px -1px 14px 1px rgba(0, 0, 0, 0.2);
-                border: 1px solid black;
+                box-shadow: -1px -1px 14px rgba(0, 0, 0, 0.2), 2px 2px 14px rgba(0, 0, 0, 0.2);
+                // border: 1px solid white;
+                width: 100%;
 
                 @media #{$minMed} {
-                    width: 100%;
+
                     box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
                     border: none;
-
-
                 }
-
             }
 
             &.select {
@@ -134,31 +110,23 @@
                     width: 100%;
                     // box-shadow: 0 -12px 68px 0 rgba(96, 42, 34, 0.44);
                     box-shadow: 10px 9px 27px 1px rgba(0, 0, 0, 0.28);
-
                 }
 
                 .selected-container {
+                    display: flex;
                     opacity: 1;
                     visibility: visible;
-
                 }
-
             }
-
 
             &.latte-img {
                 position: relative;
                 padding: 0;
                 object-fit: contain;
-                // height: 40px;
 
                 @media #{$minMed} {
-
                     height: 104px;
-
                 }
-
-                // width: 90%;
 
                 img {
                     height: 100%;
@@ -177,14 +145,11 @@
 
                     @media #{$minMed} {
                         justify-content: space-between;
-
                     }
 
                     @extend %px;
                 }
             }
-
-
         }
     }
 }
@@ -199,6 +164,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //align-items: center;
 
 }

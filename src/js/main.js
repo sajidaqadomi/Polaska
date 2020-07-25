@@ -136,7 +136,8 @@ $(function () {
                         // infinite: false,
                         // centerPadding: '40px',
                         // slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        swipe: true
                     }
                 }
 
@@ -262,7 +263,7 @@ $(function () {
 
             let sliderItem = `<div id=${name}>
             <div class='slider-item' data-name=${name} data-deg=${deg}  style=${style}>
-                             <span class="name d-none d-md-flex">${name}</span>
+                             <span class="color-name d-none d-md-flex">${name}</span>
                              <div class='selected-container d-none d-md-flex'>
                              <img src="imgs/selected.jpg"
                              class="Selected">

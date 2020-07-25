@@ -12,12 +12,8 @@ html {
 }
 
 section {
-    padding: 60px 0; //related sec
-    border-bottom: 1px solid rgba($mainGColor, 1);
-
-    &.products {
-        padding: 0;
-    }
+    padding: 60px 0; //related details sec
+    border-bottom: 1px solid rgba($mainBColor, .1);
 
     .title {
         font-size: 32px;
@@ -43,26 +39,17 @@ section {
 
     @media #{$minMed} {
         border-bottom: 0;
-        border-top: 1px solid rgba($mainGColor, 1);
-        padding: 5.25em 0 4.25em 0;
+        border-top: 1px solid rgba($mainBColor, .1);
+        padding: 84px 0 77px 0;
 
-        &.products {
-            padding: 0;
-
-            .unit {
-
-                @media #{$minMed} {
-                    padding-top: 4.25em;
-                    padding-bottom: 4.25em;
-
-                }
-
-
-            }
-
-        }
 
     }
+
+
+
+
+
+
 
 }
 
