@@ -74,10 +74,12 @@ input {
 
 .custom-container {
   max-width: 100vw;
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 16px;
+  padding-right: 16px; }
   .custom-container.s-both {
     padding-left: 0;
+    padding-right: 0; }
+  .custom-container.s-right {
     padding-right: 0; }
   @media (min-width: 768px) {
     .custom-container {
@@ -85,6 +87,8 @@ input {
       padding-right: 60px; }
       .custom-container.s-both {
         padding-left: 60px;
+        padding-right: 60px; }
+      .custom-container.s-right {
         padding-right: 60px; }
       .custom-container.left {
         padding-left: 0; }
@@ -137,7 +141,7 @@ section {
   display: flex; }
   .slick-slider.daynamic-content .slick-track .card-wrapper {
     height: inherit;
-    margin: 0 0 0 10px; }
+    margin: 0 10px 0 0; }
     @media (min-width: 768px) {
       .slick-slider.daynamic-content .slick-track .card-wrapper {
         margin: 0 15px 0 0; } }
@@ -522,7 +526,7 @@ header {
   padding: 0; }
 
 .colors-types {
-  padding: 5px 15px 24px 15px; }
+  padding: 5px 16px 24px 16px; }
   @media (min-width: 768px) {
     .colors-types {
       padding: 0; } }
@@ -656,7 +660,7 @@ header {
 .quezprice-sec {
   font-weight: 600; }
   .quezprice-sec.mobile {
-    padding: 20px 15px; }
+    padding: 20px 16px; }
   .quezprice-sec .product-info {
     margin-bottom: 8px;
     font-weight: bold; }
@@ -708,7 +712,7 @@ header {
 
 .buy-product {
   height: 100%;
-  padding: 24px 15px 33px 15px; }
+  padding: 24px 16px 33px 16px; }
   @media (min-width: 768px) {
     .buy-product {
       border-left: 1px solid #d8d8d8;
