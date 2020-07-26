@@ -26,7 +26,24 @@
         }
     }
 
-    .slick-dotes {
-        bottom: -28px;
+    .slick-dots {
+        bottom: -20px;
+        // background-color: red;
+
+        li {
+            width: 4px;
+            height: 4px;
+            // background-color: red;
+
+            button {
+
+                &:before {
+
+                    width: 4px;
+                    height: 4px;
+                }
+            }
+
+        }
     }
 }

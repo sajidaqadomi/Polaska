@@ -32,6 +32,8 @@ header {
                     position: relative;
                     transition: all .3s ease-in-out;
 
+
+
                     .icon-link {
                         display: block;
 
@@ -56,6 +58,7 @@ header {
 
                     &.cart {
                         cursor: default;
+
 
                         &:before {
                             content: attr(data-cart);

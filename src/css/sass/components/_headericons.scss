@@ -9,6 +9,18 @@
         position: relative;
         transition: all .3s ease-in-out;
 
+        &.m-item {
+            flex-basis: 0;
+            flex-grow: 1;
+
+            &.cart {
+                &:before {
+                    right: 12px;
+                    transform: translateX(50%);
+                }
+            }
+        }
+
         .icon-link {
             display: block;
 
